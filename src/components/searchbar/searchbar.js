@@ -2,8 +2,6 @@ import React from "react";
 import "antd/dist/antd.css";
 import "./searchbar.css";
 import { Input, AutoComplete } from "antd";
-import { UserOutlined } from "@ant-design/icons";
-import lessons from "../fixtures/course.json";
 
 const renderTitle = (title) => (
   <span>
@@ -62,9 +60,6 @@ export default function SearchBar({ children, ...restProps }) {
       <Input.Search
         size="large"
         placeholder="Search for your course today..."
-        filterOption={(inputValue, lessons) =>
-          lessons.name.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
-        }
       />
     </AutoComplete>
   );
