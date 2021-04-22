@@ -24,8 +24,6 @@ To view a demo example, **[click here](https://modest-kare-90824e.netlify.app/)*
 
 ![Folder Structure](https://github.com/mjane668899/isobar-ui-coding-challenge/blob/main/public/images/folder.png)
 
-### A simple explanation on how I organise my design code
-
 ![Explaination](https://github.com/mjane668899/isobar-ui-coding-challenge/blob/main/public/images/folder1.png)
 
 ## Deployment 📦
@@ -34,10 +32,11 @@ To view a demo example, **[click here](https://modest-kare-90824e.netlify.app/)*
 
 ## Future Improvement
 
-- User Sign-up
-- User-icon show user profile details
-- Automated search bar
+- User Log-in and Log out
+- User-icon will show user profile details when user click
+- Automated search filter and sort filter
 - Individual course page for user to check out more in details
+- Cart-icon will show how many item were added into the cart
 
 ## Authors
 
