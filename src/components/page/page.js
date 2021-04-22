@@ -1,19 +1,13 @@
 import React from "react";
-import "antd/dist/antd.css";
 import "./page.css";
-import { Layout, Menu } from "antd";
-import { Avatar } from "antd";
-import { Input, Space } from "antd";
-import { ShoppingFilled } from "@ant-design/icons";
+import "antd/dist/antd.css";
+import { Layout, Menu, Avatar, Carousel } from "antd";
 import { UserOutlined } from "@ant-design/icons";
-import { Carousel } from "antd";
 
 // This is a ant-design function
 const { Header, Content, Footer } = Layout;
-const { Search } = Input;
-const onSearch = (value) => console.log(value);
 
-// This is a layout
+// This is a Layout Container
 export default function Page({ children, ...restProps }) {
   return (
     <Layout className="Layout" {...restProps}>
@@ -22,7 +16,7 @@ export default function Page({ children, ...restProps }) {
   );
 }
 
-// This is a header
+// This is a Header
 Page.Header = function PageHeader({ children, ...restProps }) {
   return <Header {...restProps}>{children}</Header>;
 };
@@ -50,15 +44,6 @@ Page.MenuItem = function PageMenuItem({ children, ...restProps }) {
   );
 };
 
-// This is a Content Container
-Page.Content = function PageContent({ children, ...restProps }) {
-  return (
-    <Content className="container-container" {...restProps}>
-      {children}
-    </Content>
-  );
-};
-
 // This is a User Icon
 Page.User = function PageUser({ children, ...restProps }) {
   return (
@@ -69,43 +54,6 @@ Page.User = function PageUser({ children, ...restProps }) {
       style={{ float: "inherit" }}
     />
   );
-};
-
-// This is a Shopping cart icon
-Page.ShoppingCart = function PageShoppingCart({ children, ...restProps }) {
-  return <ShoppingFilled />;
-};
-
-// This is a basic DIV
-Page.Div = function PageDiv({ children, ...restProps }) {
-  return <div {...restProps}>{children}</div>;
-};
-
-// This is a Footer
-Page.Footer = function PageFooter({ children, ...restProps }) {
-  return (
-    <Footer style={{ textAlign: "center" }} {...restProps}>
-      {children}
-    </Footer>
-  );
-};
-
-// This is a Search Bar
-Page.Search = function PageSearch({ children, ...restProps }) {
-  return (
-    <Search
-      placeholder="Search Course"
-      size="large"
-      allowClear
-      onSearch={onSearch}
-      display="center"
-      style={{ width: 400, margin: 15, height: 20 }}
-    />
-  );
-};
-
-Page.Space = function PageSpace({ children, ...restProps }) {
-  return <Space {...restProps}>{children}</Space>;
 };
 
 // This is a Corousel Banner
@@ -125,5 +73,28 @@ Page.Carousel = function PageCarousel({ children, ...restProps }) {
         <h3 className="content-style">This is banner 4</h3>
       </div>
     </Carousel>
+  );
+};
+
+// This is a Content Container
+Page.Content = function PageContent({ children, ...restProps }) {
+  return (
+    <Content className="container-container" {...restProps}>
+      {children}
+    </Content>
+  );
+};
+
+// This is a basic DIV
+Page.Div = function PageDiv({ children, ...restProps }) {
+  return <div {...restProps}>{children}</div>;
+};
+
+// This is a Footer
+Page.Footer = function PageFooter({ children, ...restProps }) {
+  return (
+    <Footer style={{ textAlign: "center" }} {...restProps}>
+      {children}
+    </Footer>
   );
 };

@@ -11,6 +11,8 @@ import {
 
 const { Meta } = Card;
 
+// This is a Card Content Container
+// Used map to manipulate json string object (img, name, description) into the card
 export default function Content({ children, ...restProps }) {
   return (
     <Row gutter={[8, 8]}>

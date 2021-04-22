@@ -1,21 +1,22 @@
+/* Css for Search Bar Title */
 .certain-category-search-dropdown .ant-select-dropdown-menu-item-group-title {
   color: #666;
   font-weight: bold;
 }
-
+/* Css for Search Bar Group */
 .certain-category-search-dropdown .ant-select-dropdown-menu-item-group {
   border-bottom: 1px solid #f6f6f6;
 }
-
+/* Css for Search Bar dropown menu item  */
 .certain-category-search-dropdown .ant-select-dropdown-menu-item {
   padding-left: 16px;
 }
-
+/* Css for Search Bar dropdown show all menu item  */
 .certain-category-search-dropdown .ant-select-dropdown-menu-item.show-all {
   text-align: center;
   cursor: default;
 }
-
+/* Css for Search Bar dropdown when select menu item */
 .certain-category-search-dropdown .ant-select-dropdown-menu {
   max-height: 300px;
 }

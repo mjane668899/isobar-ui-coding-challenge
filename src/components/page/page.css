@@ -1,10 +1,5 @@
-.site-layout-content {
-  min-height: 280px;
-  display: flex;
-  padding: 24px;
-  background: #fff;
-}
-.logo {
+/* This css is for user icon */
+.user-icon {
   float: right;
   width: 120px;
   height: 31px;
@@ -12,41 +7,18 @@
   font-size: 40px;
 }
 
-.search {
-  float: none;
-  width: 120px;
-  height: 31px;
-  margin: 16px 0px 0px 0px;
-  font-size: 40px;
-}
-
+/* This css is for Content Container */
 .container-container {
   padding: 0px 80px 0px 80px;
   margin: 20px;
   padding: 1em;
 }
 
+/* This css is for Corousel Banner */
 .content-style {
   height: 300px;
   color: #fff;
   line-height: 160px;
   text-align: center;
   background: #010e27;
-}
-
-.ant-row-rtl .logo {
-  float: right;
-  margin: 16px 24px 16px 24px;
-}
-
-[data-theme="dark"] .site-layout-content {
-  background: #141414;
-}
-
-.icons-list > .anticon {
-  float: right;
-  width: 120px;
-  height: 31px;
-  margin: 16px 24px 16px 24px;
-  font-size: 40px;
 }

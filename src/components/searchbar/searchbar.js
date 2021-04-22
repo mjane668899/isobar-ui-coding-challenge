@@ -45,6 +45,7 @@ const options = [
   },
 ];
 
+// This is pre-populate Search Bar
 export default function SearchBar({ children, ...restProps }) {
   return (
     <AutoComplete

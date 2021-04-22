@@ -1,3 +1,4 @@
+/* This css is for Card */
 .card {
   width: 350px;
   margin: 20px;
@@ -5,6 +6,7 @@
   cursor: pointer;
 }
 
+/* This css is for when someone hover over the card image */
 .ant-card-cover:hover {
   background: #010e27;
   color: #fff;
