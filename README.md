@@ -2,7 +2,7 @@
 
 ## Homepage
 
-![Home Page](https://github.com/mjane668899/isobar-ui-coding-challenge/tree/main/public/images/homepage.png))
+![Home Page](https://github.com/mjane668899/isobar-ui-coding-challenge/blob/main/public/images/homepage.png))
 
 ## Technologies used 🛠️
 
@@ -11,7 +11,7 @@
 
 ## Folder Structure
 
-![Folder Structure](https://github.com/mjane668899/isobar-ui-coding-challenge/tree/main/public/images/folder.png))
+![Folder Structure](https://github.com/mjane668899/isobar-ui-coding-challenge/blob/main/public/images/folder.png))
 
 ## Features
 
