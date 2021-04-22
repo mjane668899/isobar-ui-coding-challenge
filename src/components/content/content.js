@@ -17,8 +17,8 @@ export default function Content({ children, ...restProps }) {
       <Col span={1} style={{ float: "inherit" }}>
         {lessons.map((item) => (
           <Card
+            className="card"
             key={item.name}
-            style={{ width: 350, margin: 50, borderRadius: 20 }}
             cover={<img alt="example" src={item.image} />}
             actions={[
               <SettingOutlined key="setting" />,
@@ -27,6 +27,7 @@ export default function Content({ children, ...restProps }) {
             ]}
           >
             <Meta
+              className="meta"
               avatar={<Avatar src={item.image} />}
               title={item.name}
               description={item.description}

@@ -1,6 +1,6 @@
 import React from "react";
-import { Page } from "../components";
-import { Content } from "../components";
+import * as ROUTES from "../constants/routes";
+import { Page, Content, SearchBar } from "../components";
 
 export function PageContainer() {
   return (
@@ -11,12 +11,14 @@ export function PageContainer() {
             <Page.User />
           </Page.Div>
           <Page.Menu>
-            <Page.MenuItem key="1">HOME</Page.MenuItem>
+            <Page.MenuItem key="1" to={ROUTES.HOME}>
+              HOME
+            </Page.MenuItem>
           </Page.Menu>
         </Page.Header>
         <Page.Carousel></Page.Carousel>
         <Page.Content>
-          <Page.Search></Page.Search>
+          <SearchBar />
           <Content.Row>
             <Content></Content>
             <Content></Content>

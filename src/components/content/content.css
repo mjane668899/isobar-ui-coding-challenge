@@ -1,0 +1,11 @@
+.card {
+  width: 350px;
+  margin: 50px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.ant-card-cover:hover {
+  background: #010e27;
+  color: #fff;
+}

@@ -1,8 +1,9 @@
 import React from "react";
 import "antd/dist/antd.css";
-import "./autoComplete.css";
+import "./searchbar.css";
 import { Input, AutoComplete } from "antd";
 import { UserOutlined } from "@ant-design/icons";
+import lessons from "../fixtures/course.json";
 
 const renderTitle = (title) => (
   <span>
@@ -30,31 +31,19 @@ const renderItem = (title, count) => ({
       }}
     >
       {title}
-      <span>
-        <UserOutlined /> {count}
-      </span>
     </div>
   ),
 });
 
 const options = [
   {
-    label: renderTitle("Libraries"),
+    label: renderTitle("Courses"),
     options: [
-      renderItem("AntDesign", 10000),
-      renderItem("AntDesign UI", 10600),
+      renderItem("React"),
+      renderItem("Vue"),
+      renderItem("Javascript"),
+      renderItem("CSS"),
     ],
-  },
-  {
-    label: renderTitle("Solutions"),
-    options: [
-      renderItem("AntDesign UI FAQ", 60100),
-      renderItem("AntDesign FAQ", 30010),
-    ],
-  },
-  {
-    label: renderTitle("Articles"),
-    options: [renderItem("AntDesign design language", 100000)],
   },
 ];
 
@@ -64,11 +53,19 @@ export default function SearchBar({ children, ...restProps }) {
       dropdownClassName="certain-category-search-dropdown"
       dropdownMatchSelectWidth={500}
       style={{
-        width: 250,
+        width: 600,
+        margin: 15,
+        height: 20,
       }}
       options={options}
     >
-      <Input.Search size="large" placeholder="input here" />
+      <Input.Search
+        size="large"
+        placeholder="Search for your course today..."
+        filterOption={(inputValue, lessons) =>
+          lessons.name.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
+        }
+      />
     </AutoComplete>
   );
 }
