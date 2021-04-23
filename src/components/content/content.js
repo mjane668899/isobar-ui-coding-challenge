@@ -12,16 +12,19 @@ import {
 
 const { Meta } = Card;
 
-// This is a Card Content Container
+// This is a Card Container
 // Used map to manipulate json string object (img, name, description) into the card
 export default function Content({ children, ...restProps }) {
   const [cart, setCart] = useState([]);
   // Console.log to check the addToCart Button is working
   const addToCart = (item) => {
     console.log("we are a addToCart");
-    setCart([...cart, item]);
+    setCart([...cart, { ...item }]);
   };
-
+  // Remove item from cart
+  const removeFromCart = (productToRemove) => {
+    setCart(cart.filter((item) => item !== productToRemove));
+  };
   // Pop-up cart item
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -67,26 +70,36 @@ export default function Content({ children, ...restProps }) {
           >
             {cart.map((product, idx) => (
               <Card
-                style={{ marginTop: 16, textAlign: "left" }}
+                style={{ wordWrap: "break-word" }}
                 type="inner"
                 title={product.name}
                 key={idx}
               >
                 <Meta
                   className="meta"
-                  title={product.description}
-                  description={item.duration}
+                  style={{
+                    marginTop: 16,
+                    textAlign: "left",
+                    wordWrap: "break-word",
+                  }}
+                  title={product.author}
+                  description={product.description}
                   avatar={
                     <Avatar
                       shape="square"
-                      size={64}
+                      size={90}
                       style={{ marginRight: 20 }}
                       icon={<UserOutlined />}
                       src={product.image}
                     />
                   }
                 />
-                <Button style={{ float: "right" }}>Delete Course</Button>
+                <Button
+                  style={{ float: "right" }}
+                  onClick={() => removeFromCart(product)}
+                >
+                  Remove
+                </Button>
               </Card>
             ))}
           </Modal>
