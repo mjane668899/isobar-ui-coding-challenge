@@ -1,7 +1,7 @@
 import React from "react";
 import "./page.css";
 import "antd/dist/antd.css";
-import { Layout, Menu, Avatar, Carousel } from "antd";
+import { Layout, Menu, Avatar, Carousel, Badge } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 
 // This is a ant-design function

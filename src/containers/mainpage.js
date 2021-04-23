@@ -25,14 +25,7 @@ export function PageContainer() {
           {/* Search Bar */}
           <SearchBar />
           {/* Card for Course Content */}
-          <Content.Row>
-            <Content></Content>
-            <Content></Content>
-            <Content></Content>
-            <Content></Content>
-            <Content></Content>
-            <Content></Content>
-          </Content.Row>
+          <Content />
         </Page.Content>
         {/* Footer */}
         <Page.Footer>©2021 Created by Michelle Teoh</Page.Footer>
