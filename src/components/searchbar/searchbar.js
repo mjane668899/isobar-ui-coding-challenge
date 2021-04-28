@@ -1,6 +1,7 @@
 import React from "react";
 import "antd/dist/antd.css";
 import "./searchbar.css";
+import lessons from "../fixtures/course.json";
 import { Input, AutoComplete } from "antd";
 
 const renderTitle = (title) => (
@@ -19,7 +20,7 @@ const renderTitle = (title) => (
   </span>
 );
 
-const renderItem = (title, count) => ({
+const renderItem = (title) => ({
   value: title,
   label: (
     <div
@@ -33,17 +34,25 @@ const renderItem = (title, count) => ({
   ),
 });
 
+// This is a prepopulate Json Data
 const options = [
   {
     label: renderTitle("Courses"),
-    options: [
-      renderItem("React"),
-      renderItem("Vue"),
-      renderItem("Javascript"),
-      renderItem("CSS"),
-    ],
+    options: lessons.map((item) => renderItem(item.name)),
   },
 ];
+
+// const options = [
+//   {
+//     label: renderTitle("Courses"),
+//     options: [
+//       renderItem("React"),
+//       renderItem("Vue"),
+//       renderItem("Javascript"),
+//       renderItem("CSS"),
+//     ],
+//   },
+// ];
 
 // This is pre-populate Search Bar
 export default function SearchBar({ children, ...restProps }) {
@@ -52,9 +61,7 @@ export default function SearchBar({ children, ...restProps }) {
       dropdownClassName="certain-category-search-dropdown"
       dropdownMatchSelectWidth={500}
       style={{
-        width: 600,
-        margin: 15,
-        height: 20,
+        width: 400,
       }}
       options={options}
     >

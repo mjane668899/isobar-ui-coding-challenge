@@ -28,6 +28,7 @@ export default function Content({ children, ...restProps }) {
   // Pop-up cart item
   const [isModalVisible, setIsModalVisible] = useState(false);
 
+  // This is a ant-design pop-up setting for view cart
   const showModal = () => {
     setIsModalVisible(true);
   };
@@ -68,14 +69,10 @@ export default function Content({ children, ...restProps }) {
             onOk={handleOk}
             onCancel={handleCancel}
           >
-            {cart.map((product, idx) => (
-              <Card
-                style={{ wordWrap: "break-word" }}
-                type="inner"
-                title={product.name}
-                key={idx}
-              >
+            {cart.map((product, index) => (
+              <Card type="inner" title={product.name} key={index}>
                 <Meta
+                  key="product"
                   className="meta"
                   style={{
                     marginTop: 16,
@@ -114,6 +111,10 @@ export default function Content({ children, ...restProps }) {
     </Col>
   );
 }
+
+// Content.addToCart = function ContentAddToCart({children, ...restProps}) {
+//   return()
+// }
 
 Content.Row = function ContentRow({ children, ...restProps }) {
   return (
